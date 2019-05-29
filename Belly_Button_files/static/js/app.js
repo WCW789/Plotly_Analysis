@@ -127,16 +127,17 @@ function buildCharts(sample) {
     console.log("here", w)
 
     let sample_array = w.sample_values.slice(0, 10)
-    let sample_array2 = sample_array.map(x => x + 10);
+    let sample_array2 = sample_array.map(x => x + 5);
 
     let data_bubble = [{
-      x: w.sample_values.slice(0, 10),
-      y: w.otu_ids.slice(0, 10),
-      hovertext: w.otu_labels.slice(0, 10),
-      text: w.otu_ids.slice(0, 10),
+      y: w.sample_values,
+      x: w.otu_ids,
+      hovertext: w.otu_labels,
+      text: w.otu_ids,
       mode: 'markers',
       name: `Sample ${sample}`,
       marker: {
+        color: w.otu_ids,
         size: sample_array2,
       }
     }];

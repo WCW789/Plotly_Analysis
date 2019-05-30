@@ -99,7 +99,7 @@ function buildMetadata(sample) {
             color: 'black'
           }
         }],
-        title: 'Belly Button Gauge Chart',
+        title: 'Belly Button - Gauge Chart',
         height: 800,
         width: 800,
         xaxis: {
@@ -144,7 +144,7 @@ function buildCharts(sample) {
     }];
 
     let layout1 = {
-      title: 'Belly Button Bubble Chart',
+      title: 'Belly Button - Bubble Chart',
       height: 600,
       width: 800,
       xaxis: {
@@ -170,7 +170,7 @@ function buildCharts(sample) {
     }];
 
     let layout2 = {
-      title: 'Belly Button Pie Chart',
+      title: 'Belly Button - Pie Chart',
       height: 600,
       width: 800
     };

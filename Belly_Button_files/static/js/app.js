@@ -134,29 +134,29 @@ function buildCharts(sample) {
       y: w.sample_values,
       x: w.otu_ids,
       hovertext: w.otu_labels,
-      text: w.otu_ids,
+      text: w.otu_labels,
       mode: 'markers',
       name: `Sample ${sample}`,
       marker: {
         color: id_colors,
         size: sample_array2,
       },
-      xaxis=go.layout.XAxis(
-        title = go.layout.xaxis.Title(
-          text = 'IDs',
-        )
-      ),
-      yaxis=go.layout.YAxis(
-        title = go.layout.yaxis.Title(
-          text = 'Sample Values',
-        )
-      )
     }];
 
     let layout1 = {
       title: 'Belly Button Bubble Chart',
       height: 600,
-      width: 800
+      width: 800,
+      xaxis: {
+        title: {
+          text: 'IDs',
+        },
+      },
+      yaxis: {
+        title: {
+          text: 'Sample Values',
+        }
+      }
     };
 
     Plotly.plot("bubble", data_bubble, layout1);

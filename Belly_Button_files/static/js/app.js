@@ -126,8 +126,8 @@ function buildCharts(sample) {
   d3.json(url_sample).then(function (w) {
     console.log("here", w)
 
-    let sample_array = w.sample_values.slice(0, 10);
-    let sample_array2 = sample_array.map(x => x + 5);
+    let sample_array = w.sample_values;
+    let sample_array2 = sample_array.map(x => x + 10);
     let id_colors = w.otu_ids;
 
     let data_bubble = [{
@@ -144,7 +144,7 @@ function buildCharts(sample) {
     }];
 
     let layout1 = {
-      title: 'Belly Button Buble Chart',
+      title: 'Belly Button Bubble Chart',
       height: 600,
       width: 800,
       xaxis: {

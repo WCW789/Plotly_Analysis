@@ -144,7 +144,7 @@ function buildCharts(sample) {
     }];
 
     let layout1 = {
-      title: 'Belly Button Bubble Chart',
+      title: 'Belly Button Buble Chart',
       height: 600,
       width: 800,
       xaxis: {

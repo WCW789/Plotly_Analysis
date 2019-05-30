@@ -126,8 +126,9 @@ function buildCharts(sample) {
   d3.json(url_sample).then(function (w) {
     console.log("here", w)
 
-    let sample_array = w.sample_values.slice(0, 10)
+    let sample_array = w.sample_values.slice(0, 10);
     let sample_array2 = sample_array.map(x => x + 5);
+    let id_colors = w.otu_ids;
 
     let data_bubble = [{
       y: w.sample_values,
@@ -137,9 +138,19 @@ function buildCharts(sample) {
       mode: 'markers',
       name: `Sample ${sample}`,
       marker: {
-        color: w.otu_ids,
+        color: id_colors,
         size: sample_array2,
-      }
+      },
+      xaxis=go.layout.XAxis(
+        title = go.layout.xaxis.Title(
+          text = 'IDs',
+        )
+      ),
+      yaxis=go.layout.YAxis(
+        title = go.layout.yaxis.Title(
+          text = 'Sample Values',
+        )
+      )
     }];
 
     let layout1 = {

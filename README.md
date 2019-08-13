@@ -1,1 +1,1 @@
-Used Plotly for data visualizations.  Website: https://fast-cove-27352.herokuapp.com/
+Used Plotly for data visualizations.  Check out the website to explore a dataset on belly buttons: https://fast-cove-27352.herokuapp.com/
